@@ -1,3 +1,2 @@
-// import 'reflect-metadata';
-// import 'babel-polyfill';
-// import 'zone.js/dist/zone';
+import 'reflect-metadata';
+import 'zone.js/dist/zone';

@@ -10,7 +10,7 @@ return [
     /* Typescript */
     {
       exclude: /(node_modules|buildConfig)/,
-      test: /\.ts$/, loader: 'babel-loader?presets[]=es2015&presets[]=stage-0!ts-loader'
+      test: /\.ts$/, loader: 'ts-loader'
     },
 
     /* HTML Loader */

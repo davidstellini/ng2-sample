@@ -3,13 +3,13 @@ function Greeter(greeting: string) {
 }
 
 Greeter.prototype.greet = function() {
-    return "Hello, " + this.greeting;
-}
+    return 'Hello, ' + this.greeting;
+};
 
-let greeter = new Greeter("world");
+let greeter = new Greeter('world');
 
 let button = document.createElement('button');
-button.textContent = "Say Hello";
+button.textContent = 'Say Hello';
 button.onclick = function() {
     alert(greeter.greet());
 };

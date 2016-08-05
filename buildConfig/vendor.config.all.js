@@ -15,6 +15,5 @@ module.exports = [
   '@angular/common',
   '@angular/core',
   '@angular/http',
-  '@angular/platform-browser-dynamic',
-  '@angular/upgrade'
+  '@angular/platform-browser-dynamic'
 ];
