@@ -27,9 +27,8 @@ return [
 
     /* CSS Loader */
     {
-      test: /\.(less|css)$/,
-      loader: "style-loader!css-loader!less-loader",
-      exclude: /\.(css|less)$/
+      test: /\.css$/,
+      loader: "raw-loader"
     },
 
     /* JSON Loader */
