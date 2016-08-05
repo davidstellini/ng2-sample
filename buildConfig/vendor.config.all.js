@@ -1,0 +1,20 @@
+module.exports = [
+  'jquery',
+  'lodash',
+  'socket.io-client',
+  'zone.js',
+  'es5-shim',
+  'core-js/es6/array',
+  'core-js/es6/map',
+  'core-js/es6/set',
+  'core-js/es6/string',
+  'core-js/es6/symbol',
+  'core-js/es7/reflect',
+  'core-js/fn/array/includes',
+  'core-js/fn/object/assign',
+  '@angular/common',
+  '@angular/core',
+  '@angular/http',
+  '@angular/platform-browser-dynamic',
+  '@angular/upgrade'
+];
