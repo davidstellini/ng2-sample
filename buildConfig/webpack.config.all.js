@@ -25,9 +25,9 @@ module.exports = function(){
       /* Define entry point. Using requires, all required CSS, .ts files
          and so on, will be loaded */
       entry: {
-        polyfills : p.app + '/polyfills.ts',
+        polyfills : p.src + '/polyfills.ts',
         vendor: vendorConfig, // Add third party (NPM) modules
-        app :  [p.app + '/boot.ts'] // Bootstrap application
+        app :  [p.src + '/boot.ts'] // Bootstrap application
       },
       /* Build paths */
       output: {
