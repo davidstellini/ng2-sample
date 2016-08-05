@@ -1,13 +1,12 @@
-/*jslint node: true */
 'use strict';
 
-//imports
+// imports
 var vendorConfig = require('./vendor.config.all');
 var loaderConfigFactory = require('./webpack.loaders');
 var pluginFactory = require('./webpack.plugins');
 
-//Node modules:
-var glob = require("glob-array");
+// ZzNode modules:
+var glob = require('glob-array');
 var path = require('path');
 
 var p /*paths */ = {
@@ -27,19 +26,19 @@ module.exports = function(){
          and so on, will be loaded */
       entry: {
         polyfills : p.app + '/polyfills.ts',
-        app :  p.app + '/boot.ts',
         vendor: vendorConfig, // Add third party (NPM) modules
+        app :  [p.app + '/boot.ts'] // Bootstrap application
       },
       /* Build paths */
       output: {
-        path : path.resolve(process.cwd(), '/build'),
+        path : p.build,
         publicPath: '/',
-        filename: 'src/app/' + '[name].js',
-        chunkFilename: '/src/app/' + '[id].js'
+        filename: '[name].js',
+        chunkFilename: '[id].js'
       },
       /* Module resolution */
       resolve: {
-        modulesDirectories: ["node_modules"],
+        modulesDirectories: ['node_modules'],
         extensions: ['', '.html', '.less', '.css', '.ts', '.js', '.json'],
         alias: {
           '_' : 'lodash'
@@ -52,15 +51,15 @@ module.exports = function(){
         preLoaders: [
           { test: /\.ts$/,
             exclude: /(node_modules|typings)/,
-            loader: "tslint-loader" },
+            loader: 'tslint-loader' },
         ],
         loaders : loaderConfig
       },
 
       plugins: plugins.loadedPlugins,
       tslint : {
-        "emitErrors" : true,
-        "failOnHint" : true
+        'emitErrors' : true,
+        'failOnHint' : true
       }
     };
 };

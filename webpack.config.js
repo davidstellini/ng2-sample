@@ -13,7 +13,7 @@ const prod = "PROD";
 const dev = "DEV";
 
 if (!process.env.NODE_ENV) {
-  process.env.NODE_ENV = prod;
+  process.env.NODE_ENV = dev; // TODO: for now
 }
 
 switch (process.env.NODE_ENV)

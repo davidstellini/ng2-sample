@@ -1,17 +1,19 @@
-function Greeter(greeting: string) {
-    this.greeting = greeting;
+class Student {
+    fullName: string;
+    constructor(public firstName, public middleInitial, public lastName) {
+        this.fullName = firstName + ' ' + middleInitial + ' ' + lastName;
+    }
 }
 
-Greeter.prototype.greet = function() {
-    return 'Hello, ' + this.greeting;
-};
+interface Person {
+    firstName: string;
+    lastName: string;
+}
 
-let greeter = new Greeter('world');
+function greeter(person: Person) {
+    return 'Hello from ' + person.firstName + ' ' + person.lastName + '!';
+}
 
-let button = document.createElement('button');
-button.textContent = 'Say Hello';
-button.onclick = function() {
-    alert(greeter.greet());
-};
+let user = new Student('', 'M.', 'TypeScript');
 
-document.body.appendChild(button);
+document.body.innerHTML = greeter(user);

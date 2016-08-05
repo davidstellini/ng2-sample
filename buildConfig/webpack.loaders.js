@@ -1,4 +1,3 @@
-/*jslint node: true */
 'use strict';
 
 var pluginsFactory = require('./webpack.plugins');
@@ -16,6 +15,7 @@ return [
     /* HTML Loader */
     {
       exclude: /(node_modules|buildConfig)/,
+      test: /\.html$/,
       loader: 'html'
     },
 
