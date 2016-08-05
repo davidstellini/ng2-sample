@@ -1,0 +1,19 @@
+{
+  "name": "code-pulit",
+  "version": "0.0.1",
+  "description": "An Angular2, Webpack project for demonstration purposes.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidstellini/code-pulit.git"
+  },
+  "author": "David Mifsud, David Stellini, Hagen Ebejer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidstellini/code-pulit/issues"
+  },
+  "homepage": "https://github.com/davidstellini/code-pulit#readme"
+}
