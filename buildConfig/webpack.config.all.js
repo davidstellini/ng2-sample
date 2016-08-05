@@ -5,7 +5,7 @@ var vendorConfig = require('./vendor.config.all');
 var loaderConfigFactory = require('./webpack.loaders');
 var pluginFactory = require('./webpack.plugins');
 
-// ZzNode modules:
+// Node modules:
 var glob = require('glob-array');
 var path = require('path');
 
