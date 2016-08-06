@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Http} from '@angular/http';
 
-interface Person {
+export interface Person {
   id: string;
   name: string;
   surname: string;
@@ -12,7 +12,7 @@ interface Person {
 export class PeopleApiService {
   constructor(private http: Http) {}
 
-  find(personId: number) {
-    return this.http.get('/people/index.json').map(res => <Person[]>res.json());
+  findAll() {
+    return this.http.get('people').map(res => <Person[]>res.json());
   }
 }
