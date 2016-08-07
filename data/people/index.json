@@ -1,0 +1,4 @@
+[
+     { "id": 0, "name": "David", "surname": "Stellini", "avatar": "/relative/url/stellini" },
+     { "id": 1, "name": "David", "surname": "Mifsud", "avatar": "/relative/url/mifsud" }
+]

@@ -1,10 +1,10 @@
 import { provideRouter, RouterConfig } from '@angular/router';
 import { App } from './components';
-import { aboutMeRoutes, experienceRoutes } from './components';
+import { aboutUsRoutes, experienceRoutes } from './components';
 
 export const routes: RouterConfig = [
-  { path: '', redirectTo : '/about-me', terminal : true },
-  ...aboutMeRoutes,
+  { path: '', redirectTo : '/about-us', terminal : true },
+  ...aboutUsRoutes,
   ...experienceRoutes
 ];
 
