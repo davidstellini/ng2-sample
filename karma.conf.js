@@ -19,7 +19,7 @@ module.exports = function(config) {
 
     preprocessors: {
       // Run this through webpack, and enable inline sourcemaps
-      'test/**/*.spec.ts': ['webpack', 'sourcemap'],
+      'src/**/*.spec.ts': ['webpack', 'sourcemap'],
     },
 
     plugins: [
@@ -43,7 +43,7 @@ module.exports = function(config) {
       'node_modules/zone.js/dist/zone.js',
       'node_modules/zone.js/dist/async-test.js',
       'node_modules/zone.js/dist/fake-async-test.js',
-      'test/**/*.spec.ts'
+      'src/**/*.spec.ts'
     ],
 
     webpack: {
