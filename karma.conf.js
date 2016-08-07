@@ -7,14 +7,9 @@ var karmaCoverage = require('karma-coverage');
 var karmaChromeLauncher = require('karma-chrome-launcher');
 var webpackConfig = require('./webpack.config.js');
 
-var loaderConfigFactory = require('./buildConfig/webpack.loaders');
 
 module.exports = function(config) {
-  // var gulpConfig = require('../gulp/config')();
 
-  /**
-   * List of npm packages that imported via `import` syntax
-   */
   config.set({
 
     basePath: '.',
@@ -24,7 +19,7 @@ module.exports = function(config) {
 
     preprocessors: {
       // Run this through webpack, and enable inline sourcemaps
-      'test/index.ts': ['webpack', 'sourcemap'],
+      'test/**/*.spec.ts': ['webpack', 'sourcemap'],
     },
 
     plugins: [
@@ -48,8 +43,7 @@ module.exports = function(config) {
       'node_modules/zone.js/dist/zone.js',
       'node_modules/zone.js/dist/async-test.js',
       'node_modules/zone.js/dist/fake-async-test.js',
-      'test/index.ts'
-      // 'node_modules/systemjs/dist/system.src.js'
+      'test/**/*.spec.ts'
     ],
 
     webpack: {

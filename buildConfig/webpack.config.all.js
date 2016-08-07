@@ -50,7 +50,7 @@ module.exports = function(){
       module: {
         preLoaders: [
           { test: /\.ts$/,
-            exclude: /(node_modules|typings)/,
+            exclude: /(node_modules|typings|test)/,
             loader: 'tslint-loader' },
         ],
         loaders : loaderConfig

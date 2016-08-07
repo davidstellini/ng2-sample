@@ -4,7 +4,10 @@
   "description": "An Angular2, Webpack project for demonstration purposes.",
   "main": "index.js",
   "scripts": {
-    "test": "node ./node_modules/karma/bin/karma start --single-run"
+    "start" : "./node_modules/.bin/webpack",
+    "start-dev" : "./node_modules/.bin/webpack-dev-server",
+    "test": "node ./node_modules/karma/bin/karma start --single-run",
+    "test-dev": "node ./node_modules/karma/bin/karma start"
   },
   "repository": {
     "type": "git",
