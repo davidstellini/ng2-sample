@@ -1,7 +1,8 @@
 import { bootstrap } from '@angular/platform-browser-dynamic';
-import { HTTP_PROVIDERS } from '@angular/http';
+import { HTTP_PROVIDERS, RequestOptions } from '@angular/http';
 import { App } from './app/components';
 import { appRouterProviders } from './app/app.routes';
+import { GithubApiRequestOptions } from './app/customProviders';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { PLATFORM_DIRECTIVES, provide } from '@angular/core';
 import { LocationStrategy,
@@ -18,6 +19,7 @@ bootstrap(App, [
 
   // Routes
   appRouterProviders,
-  { provide: LocationStrategy, useClass: HashLocationStrategy }
+  { provide: LocationStrategy, useClass: HashLocationStrategy },
+  { provide: RequestOptions, useClass: GithubApiRequestOptions}
 ])
 .catch(err => console.error(err));
